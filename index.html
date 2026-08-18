@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Budget APP</title>
+    <link rel="stylesheet" href="/API Project/index.css">
+</head>
+<body>
+ 
+    <h1>Trip Budget Tracker</h1>
+    <p class="subtitle">Log expenses in any currency. See your real total in one place.</p>
+ 
+    <!-- Pick which currency you want totals shown in -->
+    <div class="card">
+      <label for="baseCurrencySelect">Show my totals in:</label>
+      <select id="baseCurrencySelect"></select>
+    </div>
+ 
+    <!-- The form for adding (or editing) an expense -->
+    <div class="card">
+      <h2 id="formTitle">Add an expense</h2>
+ 
+      <form id="expenseForm">
+ 
+        <div class="form-row">
+          <label for="descriptionInput">Description</label>
+          <input type="text" id="descriptionInput" placeholder="e.g. Dinner in Lisbon">
+        </div>
+ 
+        <div class="form-row">
+          <label for="amountInput">Amount</label>
+          <input type="text" id="amountInput" placeholder="e.g. 42.50">
+          <span class="error-text" id="amountError"></span>
+        </div>
+ 
+        <div class="form-row">
+          <label for="currencySelect">Currency</label>
+          <select id="currencySelect"></select>
+          <span class="error-text" id="currencyError"></span>
+        </div>
+ 
+        <div class="form-row">
+          <label for="categorySelect">Category</label>
+          <select id="categorySelect">
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Lodging">Lodging</option>
+            <option value="Activities">Activities</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+ 
+        <div class="form-row">
+          <label for="dateInput">Date</label>
+          <input type="date" id="dateInput">
+        </div>
+ 
+        <p id="conversionPreview" class="preview-text"></p>
+ 
+        <button type="submit" id="submitButton">Add expense</button>
+        <button type="button" id="cancelEditButton" class="secondary-button hidden">Cancel edit</button>
+ 
+      </form>
+    </div>
+ 
+    <!-- Total + category totals -->
+    <div class="card">
+      <h2>Summary</h2>
+      <div class="summary-cards" id="summaryCards"></div>
+    </div>
+ 
+    <!-- Simple bar chart, one bar per day -->
+    <div class="card">
+      <h2>Spending by day</h2>
+      <div class="bar-chart" id="barChart"></div>
+    </div>
+ 
+    <!-- The full list of expenses -->
+    <div class="card">
+      <h2>Expenses</h2>
+ 
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Original</th>
+            <th>Converted</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="expenseTableBody">
+          <!-- Rows get added here by ui.js -->
+        </tbody>
+      </table>
+    </div>
+ 
+  </div>
+ 
+  
+  
+  
+  <!-- Load the modules in order: api -> storage -> business logic -> UI -->
+  <script src="/API Project/currencyapi.js"></script>
+  <script src="/API Project/expenseStoreApi.js"></script>
+  <script src="/API Project/budgetServiceapi.js"></script>
+  <script src="/API Project/index.js"></script>
+
+</body>
+</html>

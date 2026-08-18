@@ -1,0 +1,213 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: #666;
+  margin-top: 0;
+}
+
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.form-row {
+  margin-bottom: 12px;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.error-text {
+  color: #c0392b;
+  font-size: 13px;
+  display: block;
+  margin-top: 4px;
+}
+
+.preview-text {
+  font-style: italic;
+  color: #2d6a4f;
+  min-height: 18px;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#submitButton {
+  background-color: #2d6a4f;
+  color: white;
+}
+
+#submitButton:hover {
+  background-color: #245a41;
+}
+
+.secondary-button {
+  background-color: #eee;
+  color: #333;
+  margin-left: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Summary cards */
+.summary-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.summary-card {
+  background-color: #f0f4f2;
+  border-radius: 6px;
+  padding: 10px 14px;
+  min-width: 120px;
+}
+
+.summary-card .label {
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.summary-card .value {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.summary-card.total {
+  background-color: #2d6a4f;
+  color: white;
+}
+
+.summary-card.total .label {
+  color: #d7e9df;
+}
+
+/* Bar chart made from plain divs */
+.bar-chart {
+  display: flex;
+  gap: 8px;
+  height: 140px;
+  border-bottom: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.bar-chart .bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  align-items: center;
+  height: 100%; 
+  flex: 1;
+}
+
+.bar-chart .bar {
+  width: 100%;
+  background-color: #52796f;
+  border-radius: 3px 3px 0 0;
+}
+
+.bar-chart .bar-label {
+  font-size: 10px;
+  color: #666;
+  margin-top: 4px;
+  text-align: center;
+}
+
+.bar-chart .empty-message {
+  color: #999;
+  font-style: italic;
+}
+
+/* Expense table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.rate-note {
+  display: block;
+  font-size: 11px;
+  color: #888;
+}
+
+.example-row {
+  color: #aaa;
+  font-style: italic;
+}
+
+.example-tag {
+  background-color: #eee;
+  color: #888;
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-size: 10px;
+  margin-left: 6px;
+}
+
+.row-actions button {
+  font-size: 12px;
+  padding: 4px 8px;
+  margin-right: 4px;
+}
+
+.edit-button {
+  background-color: #eee;
+}
+
+.delete-button {
+  background-color: #f8d7da;
+  color: #842029;
+}
